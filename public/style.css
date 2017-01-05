@@ -10,13 +10,15 @@ body, h1, h2, h3, p, div, li, ul {
 .sparks {
   height: 100vh;
   width: 100%;
+  perspective: 1px;
+  transform: translateZ(-1px);
   overflow-x: hidden;
-  overflow-y: hidden;
-  background: url("assets/sparklers.jpg") no-repeat center center fixed;
+  overflow-y: auto;
+  background: url("https://cdn.hyperdev.com/26ca6cc4-973c-4dcf-a43a-321c1d9f6606%2Fsparklers.jpg") no-repeat center center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; 
 }
 
 #title,
@@ -34,12 +36,7 @@ body, h1, h2, h3, p, div, li, ul {
 .sparks h1{
   margin-top: 0.7em !important;
 }
-@media (min-width: 29em){
-  #nopipe::after {
-    content: "|";
-    padding-left: 5px;
-  }
-}
+
 @media (max-width: 750px) {
   #ido {
     flex-direction: column;
@@ -57,18 +54,17 @@ body, h1, h2, h3, p, div, li, ul {
   }
 .sparks {
   height: 100vh;
-  /*width: 100%;
+  width: 100%;
   /*perspective: 1px;
   transform: translateZ(-1px);
   overflow-x: hidden;
-  overflow-y: hidden;*/
-  background: url("assets/sparklersSMALLTALL.jpg") no-repeat center center fixed;
+  overflow-y: auto;*/
+  background: url("https://cdn.hyperdev.com/26ca6cc4-973c-4dcf-a43a-321c1d9f6606%2FsparklersTALL.jpg") no-repeat center center fixed;
   background-size: cover;
-  -webkit-background-size: cover;
+  /*-webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; */
 }
-
 }
 @media (max-width: 350px){
   footer{
@@ -80,14 +76,9 @@ body, h1, h2, h3, p, div, li, ul {
     align-items: center !important;
     margin: 0;
   }
-  #projects {
-    flex-direction: column;
-    margin: 0 auto;
-  }
-  #potato, #arctangent, #heavey {
-  width: 90vw;
-  margin: 0 auto;
-  }
+  <script>var el=document.getElementById("nopipe");
+    el.innerHTML= '<p>&copy;2016 Michelle Gienow</p>';
+  </script>
 }
 
 
@@ -96,7 +87,7 @@ body, h1, h2, h3, p, div, li, ul {
   width: 50%;
   justify-content: space-around;
   margin: 0 auto;
-
+  
 }
 .sparks h2 {
   margin-left: 1em;
@@ -109,7 +100,7 @@ body, h1, h2, h3, p, div, li, ul {
 a {
   text-decoration: none;
   color: #FFF;
-  /*opacity: .7;*/
+  opacity: .7;
 }
 a:hover {
 color: #FC963D;
@@ -119,10 +110,10 @@ color: #FC963D;
 
 p {
   width: 70%;
-  padding: 0.5em;
+  padding: 5%;
   margin: 0 auto;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 20px;
   font-weight: 200;
   line-height: 1.4;
 }
@@ -137,22 +128,6 @@ p {
   font-size: 1.5em;
   font-family: 'Raleway';
 }
-
-/*   ====== PORTFOLIO ======*/
-#portfolio {
-  display: flex;
-  align-content: center;
-  flex-direction: column;
-}
-#projects {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 2em;
-}
-#potato, #arctangent, #heavey {
-max-width: 20em;
-}
-
 footer a{
   color: #FC963D;
 }
