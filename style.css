@@ -2,36 +2,44 @@ html,
 body, h1, h2, h3, p, div, li, ul {
   margin: 0;
   padding: 0;
-  font-family: Roboto;
-  color: #2e3738;
+  /*font-family: Roboto;
+  color: #2e3738;*/
 }
 
 
-.sparks {
+.sparks, #sparks2 {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  background: url("assets/sparklers.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background: url("https://cdn.hyperdev.com/26ca6cc4-973c-4dcf-a43a-321c1d9f6606%2Fsparklers.jpg")center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+.sparks {
+  justify-content: flex-end;
+}
 
-#title,
-.sparks h1 {
+#title{
   font-family: 'Raleway', sanserif;
   font-weight: 400;
   font-size: 4em;
   color: #fff;
   opacity: 0.7;
   text-align: center;
-  margin-bottom: 0;
-  margin-top: 2em;
 }
-#title {
-    margin-top: 0 !important;
+
+#sparks2 h1{
+  color: #fff;
+  text-align: center;
+  font-family: 'Raleway', sanserif;
+  font-weight: 400;
+  padding-top: 1em;
+  font-size: 4em;
+  opacity: 0.7;
+
 }
 @media (min-width: 85em){
   #title {
@@ -119,6 +127,7 @@ a {
   color: #FFF;
   /*opacity: .7;*/
 }
+
 a:hover {
 color: #FC963D;
 }
@@ -129,19 +138,11 @@ color: #FC963D;
   }
 }
 
-p {
-  width: 70%;
-  padding: 0.5em;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: 200;
-  line-height: 1.4;
-}
 #bar {
   display: flex;
   flex-direction: column;
   margin-top: 5em;
+  margin-bottom: 8em;
 }
 #bar li{
   margin: 0 0 1.5em 2em;
@@ -167,6 +168,18 @@ p {
     margin: 0;
   }
 }
+/* ======= SOCIAL MEDIA ====== */
+
+#social {
+display: flex;
+justify-content: cent;
+
+
+}
+.socialImg {
+  max-height: 2.5em;
+}
+
 /*   ====== PORTFOLIO ======*/
 #portfolio {
   display: flex;
@@ -175,17 +188,39 @@ p {
 }
 #porfolioP {
     color: #FC963D;
+      padding: 0.5em;
+      text-align: center;
+      font-size: 2.5em;
+      line-height: 1.4;
 }
 #projects {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 2em;
+  margin: 0 auto;
+  width: 95%;
+  padding-bottom: 2em;
+  justify-content: space-between;
 }
 #potato, #arctangent, #heavey {
-
-width: 30vw;
+width: 25vw;
+}
+#project1, #project2, #project3 {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 30%;
+  font-family: "Raleway";
+  color: #2e3738;
+  font-size: 1em !important;
+  text-align: center;
 }
 
+.projectP {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 1em;
+}
+
+/*   ====== FOOTER ======== */
 footer a{
   color: #FC963D;
 }
