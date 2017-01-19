@@ -172,12 +172,13 @@ color: #FC963D;
 
 #social {
 display: flex;
-justify-content: cent;
+justify-content: center;
 
 
 }
 .socialImg {
-  max-height: 2.5em;
+  max-height: 4em;
+  margin-top: 1em;
 }
 
 /*   ====== PORTFOLIO ======*/
