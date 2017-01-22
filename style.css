@@ -2,24 +2,21 @@ html,
 body, h1, h2, h3, p, div, li, ul {
   margin: 0;
   padding: 0;
-  /*font-family: Roboto;
-  color: #2e3738;*/
+  font-family: Roboto;
+  /*color: #2e3738;*/
 }
 
 
-.sparks, #sparks2 {
+.sparks {
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
-  background: url("https://cdn.hyperdev.com/26ca6cc4-973c-4dcf-a43a-321c1d9f6606%2Fsparklers.jpg")center center no-repeat;
+  background: url("https://cdn.hyperdev.com/26ca6cc4-973c-4dcf-a43a-321c1d9f6606%2Fsparkler.jpg")center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-}
-.sparks {
-  justify-content: flex-end;
 }
 
 #title{
@@ -27,20 +24,11 @@ body, h1, h2, h3, p, div, li, ul {
   font-weight: 400;
   font-size: 4em;
   color: #fff;
-  opacity: 0.7;
+  opacity: 0.85;
   text-align: center;
 }
 
-#sparks2 h1{
-  color: #fff;
-  text-align: center;
-  font-family: 'Raleway', sanserif;
-  font-weight: 400;
-  padding-top: 1em;
-  font-size: 4em;
-  opacity: 0.7;
 
-}
 @media (min-width: 85em){
   #title {
     font-size: 7.5em;
@@ -77,16 +65,6 @@ body, h1, h2, h3, p, div, li, ul {
   }
 }
 @media (max-width: 28em){
-
-  footer{
-    flex-direction: column;
-    padding: 0.5em 0;
-  }
-  footer p{
-    justify-content: center !important;
-    align-items: center !important;
-    margin: 0;
-  }
   #projects {
     flex-direction: column;
     margin: 0 auto;
@@ -115,6 +93,7 @@ body, h1, h2, h3, p, div, li, ul {
   opacity: 0.7;
   font-weight: 200;
   font-style: italic;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 @media (min-width: 85em){
   #ido{
@@ -133,8 +112,11 @@ color: #FC963D;
 }
 
 @media (min-width: 85em){
-  a{
+  .barLink{
     font-size: 2.5em;
+  }
+  #ido {
+    width: 60%;
   }
 }
 
@@ -150,6 +132,7 @@ color: #FC963D;
   font-size: 1.5em;
   font-family: 'Raleway';
 }
+
 @media (max-width: 28em){
   #bar {
     margin-top: 3em;
@@ -168,18 +151,8 @@ color: #FC963D;
     margin: 0;
   }
 }
-/* ======= SOCIAL MEDIA ====== */
-
-#social {
-display: flex;
-justify-content: center;
 
 
-}
-.socialImg {
-  max-height: 4em;
-  margin-top: 1em;
-}
 
 /*   ====== PORTFOLIO ======*/
 #portfolio {
@@ -208,10 +181,10 @@ width: 25vw;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 30%;
+  width: 80%;
   font-family: "Raleway";
   color: #2e3738;
-  font-size: 1em !important;
+  font-size: 1.5em !important;
   text-align: center;
 }
 
@@ -220,7 +193,48 @@ width: 25vw;
   margin: 0 auto;
   padding-top: 1em;
 }
+@media (min-width: 85em){
+  #portfolioP{
+    font-size: 3.5em;
+  }
+}
+/* ==== Contact/Make Sparks ====== */
+#sparks2 {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: url("https://cdn.hyperdev.com/26ca6cc4-973c-4dcf-a43a-321c1d9f6606%2Fsparklers.jpg")center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+#sparks2 h1{
+  color: #fff;
+  text-align: center;
+  font-family: 'Raleway', sanserif;
+  font-weight: 400;
+  padding-top: 1em;
+  font-size: 4em;
+  opacity: 0.8;
 
+}
+/* ======= SOCIAL MEDIA ====== */
+
+#social {
+display: flex;
+justify-content: center;
+}
+.socialImg {
+  max-height: 3em;
+  margin-top: 1.5em;
+}
+@media (min-width: 85em){
+  .socialImg {
+    max-height: 4.5em;
+  }
+}
 /*   ====== FOOTER ======== */
 footer a{
   color: #FC963D;
@@ -243,4 +257,20 @@ footer p{
 footer p:nth-child(2) {
   justify-content: flex-start;
   margin-left: 5px;
+}
+#madeHeart {
+  font-size: 1em;
+}
+
+@media (max-width: 28em){
+
+  footer{
+    flex-direction: column;
+    padding: 0.5em 0;
+  }
+  footer p{
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0;
+  }
 }
