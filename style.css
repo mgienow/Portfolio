@@ -2,7 +2,7 @@ html,
 body, h1, h2, h3, p, div, li, ul {
   margin: 0;
   padding: 0;
-  font-family: Roboto;
+  font-family: 'Raleway';
   /*color: #2e3738;*/
 }
 
@@ -26,6 +26,8 @@ body, h1, h2, h3, p, div, li, ul {
   color: #fff;
   opacity: 0.85;
   text-align: center;
+  margin-top: 0.25em;
+
 }
 
 
@@ -36,71 +38,75 @@ body, h1, h2, h3, p, div, li, ul {
     opacity: 0.8;
   }
 }
-]
-.sparks h1{
-  margin-top: 0.7em !important;
-}
-@media (min-width: 29em){
-  #nopipe::after {
-    content: "|";
-    padding-left: 5px;
+@media (max-width: 23em){
+  #title {
+    margin-top: 0;
+    color: #FC963D;
   }
-}
-@media (max-width: 47em) {
-  #ido {
-    flex-direction: column;
-    width: 100% !important;
-    align-items: center;
-  }
-  #projects {
-    flex-direction: column;
-    margin: 0 auto;
-  }
-  #potato, #arctangent, #heavey {
-    width: 90% !important;
-    margin: 0 auto;
-  }
-  #arctangent, #heavey {
-    padding-bottom: 1em;
-  }
-}
-@media (max-width: 28em){
-  #projects {
-    flex-direction: column;
-    margin: 0 auto;
-  }
-  #potato, #arctangent, #heavey {
-  width: 90vw;
-  margin: 0 auto;
-  }
-  .centerPage {
-    display: flex;
-    align-items: center;
+  #ido h2 {
+    padding-top: 0;
+    color: #fff !important;
+    opacity: 1 !important;
   }
 }
 
+@media (max-width: 47em) and (orientation: landscape) {
+  #title {
+    margin-top: 0;
+  }
+}
+/* === ido ====*/
 
 #ido{
   display: flex;
   width: 50%;
   justify-content: space-around;
   margin: 0 auto;
+  font-style: italic;
 }
 
-.sparks h2 {
-  margin-left: 1em;
-  color: #FC963D;
-  opacity: 0.7;
-  font-weight: 200;
-  font-style: italic;
-  font-family: 'Roboto', Arial, sans-serif;
-}
+
 @media (min-width: 85em){
   #ido{
     font-size: 2em;
     opacity: 1;
   }
 }
+
+@media (max-width: 47em) {
+  #ido {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+
+  }
+}
+@media (max-width: 44em) and (orientation: landscape){
+  #ido{
+    flex-direction: row;
+
+  }
+}
+@media (max-width: 30em) and (orientation: landscape){
+  #ido {
+    padding-top: 4em;
+  }
+  #bar {
+    padding-top:2em;
+  }
+}
+
+
+#ido h2 {
+  margin-left: 1em;
+  color: #FC963D;
+  opacity: 0.7;
+  font-weight: 200;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+
+
 a {
   text-decoration: none;
   color: #FFF;
@@ -112,11 +118,8 @@ color: #FC963D;
 }
 
 @media (min-width: 85em){
-  .barLink{
+  a{
     font-size: 2.5em;
-  }
-  #ido {
-    width: 60%;
   }
 }
 
@@ -132,16 +135,16 @@ color: #FC963D;
   font-size: 1.5em;
   font-family: 'Raleway';
 }
-
 @media (max-width: 28em){
   #bar {
     margin-top: 3em;
     padding-left: 1em;
   }
 }
+
 @media (max-width: 47em) {
   #bar {
-    margin-top: 2em;
+    padding-top: 4em;
     padding-left: 1em;
   }
   #bar ul{
@@ -152,6 +155,18 @@ color: #FC963D;
   }
 }
 
+/* ======= SOCIAL MEDIA ====== */
+
+#social {
+display: flex;
+justify-content: center;
+
+
+}
+.socialImg {
+  max-height: 3em;
+  margin-top: 1.5em;
+}
 
 
 /*   ====== PORTFOLIO ======*/
@@ -166,6 +181,7 @@ color: #FC963D;
       text-align: center;
       font-size: 2.5em;
       line-height: 1.4;
+    font-family: 'Roboto', Arial, sans-serif;
 }
 #projects {
   display: flex;
@@ -181,10 +197,10 @@ width: 25vw;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 80%;
+  width: 30%;
   font-family: "Raleway";
   color: #2e3738;
-  font-size: 1.5em !important;
+  font-size: 1em !important;
   text-align: center;
 }
 
@@ -192,12 +208,32 @@ width: 25vw;
   width: 80%;
   margin: 0 auto;
   padding-top: 1em;
+  font-family: 'Roboto', Arial, sans-serif;
 }
-@media (min-width: 85em){
-  #portfolioP{
-    font-size: 3.5em;
+
+
+@media (max-width: 53em){
+   #projects {
+    flex-direction: column;
+    margin: 0 auto;
   }
+  #project1, #project2, #project3 {
+    width: 100%;
+  }
+  #potato, #arctangent, #heavey {
+    margin: 0 auto;
+    width: 70vw;
+    padding-bottom: 0.5em;
+  }
+  .projectP {
+    padding: 0.25em 0 3em 0;
+    width: 70%;
+  }
+  /*#arctangent, #heavey {
+    padding-bottom: 1em;
+  }*/
 }
+
 /* ==== Contact/Make Sparks ====== */
 #sparks2 {
   display: flex;
@@ -220,21 +256,13 @@ width: 25vw;
   opacity: 0.8;
 
 }
-/* ======= SOCIAL MEDIA ====== */
-
-#social {
-display: flex;
-justify-content: center;
-}
-.socialImg {
-  max-height: 3em;
-  margin-top: 1.5em;
-}
-@media (min-width: 85em){
-  .socialImg {
-    max-height: 4.5em;
+@media (max-width: 36em) and (orientation: landscape){
+  #sparks2 h1 {
+    font-size: 3em;
   }
+
 }
+
 /*   ====== FOOTER ======== */
 footer a{
   color: #FC963D;
@@ -253,13 +281,11 @@ footer p{
   opacity: 0.8;
   display: flex;
   justify-content: flex-end;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 footer p:nth-child(2) {
   justify-content: flex-start;
   margin-left: 5px;
-}
-#madeHeart {
-  font-size: 1em;
 }
 
 @media (max-width: 28em){
@@ -272,5 +298,13 @@ footer p:nth-child(2) {
     justify-content: center !important;
     align-items: center !important;
     margin: 0;
+  }
+
+}
+
+@media (min-width: 29em){
+  #nopipe::after {
+    content: "|";
+    padding-left: 5px;
   }
 }
